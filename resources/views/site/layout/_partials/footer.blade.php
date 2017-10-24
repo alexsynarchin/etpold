@@ -10,7 +10,7 @@
 <div id="overlay">
     <div class="popup">
         <h2>Технические работы!</h2>
-     <p>Извините, функционал торговой площадки временно недоступен, ведутся технические работы</p>
+     <p>Извините, некоторый функционал портала etp-rb.ru временно недоступен, ведутся технические работы</p>
         <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
     </div>
 </div>
