@@ -1,0 +1,128 @@
+﻿//большая часть стилей задана в bs
+//переменные по умолчанию могут изменены в src/sass/utils/_etp-vars.scss
+/*
+<form class="form-horizontal">
+для более рационального использования места
+в .form-horizontal .form-group работает как row: make-row($grid-gutter-width)
+все остальные элементы распределяются в сетке стандартными классами
+!класс .label не относится к тегу lable.
+
+
+Text input
+<div class="form-control">
+    <div class="col-xs-**">
+        <input type="text" class="form-control etp-form__input-text">
+
+Checkbox
+<div class="col-xs-**">
+    <label class="checkbox-inline etp-form__label">
+        <input type="checkbox"> Label
+
+Radio
+<div class="col-xs-**">
+    <label class="radio-inline etp-form__label">
+        <input type="radio"> Label
+        
+Select
+<select class="form-control etp-form__select">
+                        <option> Опция 1 </option>
+
+                        
+Datepicker
+<input type="text" class="form-control" data-module="datepicker">
+
+*/
+
+
+//all forms
+.etp-form{
+    fieldset{
+        margin-top:20px;
+    }
+    //заголовок для элемента формы, группы элементов
+    &__header{
+            color:$etp-dark-grey-c;
+            @extend %normal-bold;
+    }
+    &__legend{
+        margin: 20px 0 0 0;
+        border-bottom: 1px solid $etp-medium-grey-c;
+        span {
+            padding:5px 5px 2px 5px;
+            border-top:1px solid $etp-medium-grey-c;
+            border-right:1px solid $etp-medium-grey-c;
+            border-left:1px solid $etp-medium-grey-c;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+        
+    &__label{
+        color:$etp-dark-grey-c;
+        font-weight:500;
+        
+        -webkit-user-select: none; //clickable label selection may be irritating
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;      
+    }
+    
+    &__checkbox{
+    
+    }
+    
+    &__input-text, &__select{ //no shadows on focused elements
+        &:focus{
+            box-shadow:none !important;
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+        }
+    }
+    
+    &__select{
+    
+    }
+    
+    &__radio{
+    
+    }
+    
+    &__btn{
+        i{
+            margin:0 5px 0 0;
+        }
+        &_ok{
+            color:$etp-white-c;
+            background-color:#5cb85c;
+        }
+        
+        &_ok:hover{
+            color:$etp-white-c;
+            background-color:#449d44;
+        }
+        
+        &_cancel{       
+            background-color:$etp-grey-c;
+        }
+        
+        &_cancel:hover{       
+            background-color:$brand-danger; //$etp-light-grey-c;
+        }
+    }
+    
+    //with icon over input field
+    &__i-over-left{
+        position:relative;
+        input{
+            padding-left:50px;
+        }
+    }
+    &__i{
+        position:absolute !important;
+        color:$etp-grey-c;
+    }
+    &__i_lg{
+        top:15px;
+        left:20px;
+        font-size:20px;
+    }
+}

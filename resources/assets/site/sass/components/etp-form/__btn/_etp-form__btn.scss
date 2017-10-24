@@ -1,0 +1,24 @@
+﻿.etp-form__btn{
+    @extend .btn;
+    
+    &_ok{
+        color:$etp-white-c;
+        background-color:#5cb85c;
+
+    }
+    &_ok:hover{
+        color:$etp-white-c;
+        background-color:#449d44;
+    }
+    
+    &_cancel{
+    
+        background-color:$etp-grey-c;
+    }
+    &_cancel:hover{
+    
+        background-color:$etp-light-grey-c;
+    }
+    
+    
+}

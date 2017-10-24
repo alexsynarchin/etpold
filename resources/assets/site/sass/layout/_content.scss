@@ -1,0 +1,64 @@
+﻿div.content {
+    background:$content-background-c;
+    position:relative;
+    z-index:$content-z;
+    padding-bottom:$footer-h + 15px;
+}
+
+@include media(">tablet"){
+    div.content{
+        transition: transform 0.3s ease-in-out 0s, margin 0.3s ease-in-out 0s;
+        margin-left:$aside-w-expanded;
+    }
+    .sidebar-expanded div.content{
+        margin-left:$aside-w-expanded;
+    } 
+    .sidebar-collapsed div.content{
+        margin-left:$aside-w-collapsed;
+    } 
+}
+
+@include media("<=tablet"){
+    div.content{
+        transition: transform 0.3s ease-in-out 0s, margin 0.3s ease-in-out 0s;
+        margin-left:$aside-w-collapsed;
+    }
+    .sidebar-expanded div.content{
+        margin-left:$aside-w-expanded;
+    } 
+    .sidebar-collapsed div.content{
+        margin-left:$aside-w-collapsed;
+    } 
+}
+/*vertical rhythm*/
+.content {
+    .row, .form-group {
+        margin-top:15px;
+        .placeholder{
+        margin-bottom:15px;
+        }
+    }
+}
+
+/*placeholders*/
+.content {
+    .placeholder{
+    display:block;
+    background:$etp-grey;
+    color:$etp-grey;
+    }
+}
+.content-gp {
+    .placeholder{
+        display:block;
+        background:$etp-grey;
+        color:$etp-grey;
+    }
+    padding-bottom:$footer-h +15px;
+    .row, .form-group {
+        margin-top:15px;
+        .placeholder{
+        margin-bottom:15px;
+        }
+    }
+}

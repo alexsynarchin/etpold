@@ -1,0 +1,34 @@
+﻿//Sort search results contain form block as well
+.etp-search-result-filters {
+
+
+    overflow:hidden;
+
+    &__content {
+        //layout
+        padding:15px;
+        
+        
+        background:$etp-white-c;        
+        border-left:1px solid $etp-grey-c;
+        border-right:1px solid $etp-grey-c;
+        border-bottom:1px solid $etp-grey-c;
+        border-radius:0 0 5px 5px;
+    }
+    
+    &__header {
+        height:36px;
+        border-radius:5px 5px 0 0;
+        color:$etp-white-c;
+        @extend %normal-bold;
+        background:$etp-medium-grey-c;
+        
+        text-align: center;
+        vertical-align: middle;
+        line-height: 36px;
+    }
+    
+    &__header.collapsed {
+        border-radius:5px;
+    }
+}

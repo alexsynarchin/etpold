@@ -1,0 +1,25 @@
+﻿//search result sorting block
+.etp-search-result-sorting{
+    
+    color:$etp-dark-grey-c;
+    padding:5px 0;
+    
+    &__title {
+        @extend %normal-bold;
+    }
+    &__type {
+        margin-left:5px;
+        @extend %normal-thin;
+    }
+    &__btn {
+        margin:0 5px;
+        padding:0 3px;
+        border-radius:3px;
+        width:18px;
+        height:18px;
+        @extend %button-light;
+    }
+    &__btn:hover {
+        @extend %button-dark;
+    }
+}

@@ -1,0 +1,52 @@
+﻿.sidebar{
+    transition: transform 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:$aside-z; 
+    
+    height:100%;
+    background:$aside-background-color;
+    
+    &__toggle {
+        margin-bottom:5px;
+        height:36px;
+        background:$etp-grey;
+        display:block;
+        width:100%;
+        text-align:right;
+        i {
+            margin:5px 15px 5px 0px;
+            color:$etp-white;
+            font-size:24px;
+        }
+    }
+    &__toggle:focus {
+        outline: 0;
+    }
+}
+
+
+//todo adaptive behaviour
+@include media(">tablet"){
+
+    .sidebar{
+        width:$aside-w-expanded;
+        padding:$header-h-desktop 0 $footer-h 0;
+    }
+    
+    .sidebar-collapsed .sidebar{
+        width:$aside-w-collapsed !important;
+    }
+}
+
+@include media("<=tablet"){
+    .sidebar{
+        width:$aside-w-collapsed;
+        padding:$header-h-tablet 0 $footer-h 0;
+    }
+    
+    .sidebar-expanded .sidebar{
+        width:$aside-w-expanded !important;
+    }
+}

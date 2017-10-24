@@ -1,0 +1,16 @@
+﻿.content-search {
+    >.container-fluid>.row>div>div{ //top element of every block
+    margin-bottom:15px;
+    }
+    .etp-search-result-sorting{
+        float:left;
+    }
+    .etp-search-switch-view{
+        float:right;
+    }
+    .search-result-table{
+        clear:both;
+    }
+
+
+}

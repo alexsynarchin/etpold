@@ -1,0 +1,46 @@
+﻿footer {
+    background:linear-gradient(0deg, $etp-medium-grey-c 0%, $etp-medium-grey-c 70%, $etp-dark-grey-c 100%);
+    color:$etp-white-c;
+    position:absolute;
+    z-index:$footer-z;
+    height:$footer-h;
+    &.main-footer{
+        bottom:0;
+        left:0;
+        width:100%
+    }
+    &.footer-gp{
+        bottom:0;
+        left:0;
+        width:100%
+    }
+}
+.main-footer_hidden{
+    visibility: hidden;
+}
+
+@include media(">tablet"){
+    footer.main-footer{
+        transition: transform 0.3s ease-in-out 0s, margin 0.3s ease-in-out 0s;
+        padding-left:$aside-w-expanded;
+    }
+    .sidebar-expanded footer{
+        padding-left:$aside-w-expanded;
+    } 
+    .sidebar-collapsed footer{
+        padding-left:$aside-w-collapsed;
+    }
+}
+
+@include media("<=tablet"){
+    footer.main-footer{
+        transition: transform 0.3s ease-in-out 0s, margin 0.3s ease-in-out 0s;
+        padding-left:$aside-w-collapsed;
+    }
+    .sidebar-expanded footer{
+        padding-left:$aside-w-expanded;
+    } 
+    .sidebar-collapsed footer{
+        padding-left:$aside-w-collapsed;
+    }
+}

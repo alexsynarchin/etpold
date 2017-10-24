@@ -1,0 +1,83 @@
+.site-page-header {
+  background: @header-background;
+  height: 92px;
+  width: 100%;
+  font-family: 'Exo 2',sans-serif;
+  &__logo {
+    .make-xs-column(4);
+    margin-top:10px;
+    &-title {
+      color: @etp-yellow-c;
+      font-weight: 200;
+      font-size:20px;
+      @media (max-width: @screen-md-max) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__phone {
+    .make-xs-column-offset(1);
+    .make-xs-column(3);
+    margin-top: 15px;
+    color:@etp-yellow-c;
+    &-icon {
+      display:inline-flex;
+      display: -webkit-inline-flex; /* Safari */
+      width:36px;
+      height:36px;
+      border:solid 1px @etp-yellow-c;
+      border-radius:100%;
+      font-size:22px;
+      justify-content: center;
+      align-items: center;
+      -webkit-align-items: center; /* Safari 7.0+ */
+    }
+    &-number{
+      vertical-align:+2px;
+      font-size:20px;
+      margin-left:10px;
+    }
+    &-text {
+      @media (max-width: @screen-md-max) {
+        font-size: 12px;
+      }
+    }
+  }
+  &__auth {
+    .make-xs-column(4);
+    color:@etp-yellow-c;
+    margin-top:20px;
+    text-align: right;
+    ul{
+      margin: 0;
+      list-style-type:none;
+      li {
+        display: inline-block;
+        &:first-child {
+          padding-right: 5px;
+        }
+        &:last-child {
+          padding-left: 5px;
+        }
+        a {
+          display: inline-block;
+          border: 1px solid @etp-yellow-c;
+          padding: 10px;
+          color: @etp-yellow-c;
+          text-transform:uppercase;
+          font-size: 18px;
+          .fa {
+            margin-right: 5px;
+          }
+          &:hover {
+            text-decoration:none;
+            color: darken(@etp-yellow-c, 10%);
+            border-color: darken(@etp-yellow-c, 10%);
+            transition-duration: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+

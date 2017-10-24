@@ -1,0 +1,22 @@
+﻿/*
+*simple key value table used for example to display user info
+*/
+.etp-table-kv{
+    margin:15px 0;
+    &__key{
+            font-weight:700;
+    }
+    @include media("<=tablet"){
+        &__key{
+        width:200px;
+        }
+    }
+    @include media(">tablet"){
+        &__key{
+        width:250px;
+        }
+    }
+    &__value{
+    
+    }
+}

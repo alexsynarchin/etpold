@@ -1,0 +1,45 @@
+﻿.inf-contacts{
+    margin-top:30px;
+    margin-bottom:30px;
+    &__address, &__phone, &__email{
+        font-size:1.2em;
+    }
+    &__address:before, &__phone:before, &__email:before{
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        margin-right:15px;
+    }
+
+    &__address:before{
+        content:'\f1ad';
+
+    }
+    &__phone:before{
+        content:'\f095';
+    }
+    &__email:before{
+        content:'\f0e0';
+    }
+
+}
+.content-gp>ymaps{
+    position:absolute;
+    bottom:$footer-h;
+}
+.content-gp>ymaps:before{
+    content:'';
+    display:block;
+    position:absolute;
+    top:-30px;
+    height:30px;
+    width:100%;
+    background:linear-gradient(to top, white 15%, $etp-grey-c 20%, $content-background-c 100%);
+}
+
+//class compensate absolutely positioned slider
+.inf-contacts-page{
+    padding-bottom:500px;
+}

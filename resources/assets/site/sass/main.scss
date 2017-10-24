@@ -1,0 +1,40 @@
+.etp-clearfix {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+//Import base
+@import 'base/index';
+
+//Import vars and utils
+@import "utils/index";
+
+// Import bootstrap fontawesome etc.
+@import 'vendors/index';
+
+
+/*overwrite bootstrap styles*/
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+    outline: none;
+    outline-offset: 0px;
+}
+
+.group:after { //clearfix class
+  content: "";
+  display: table;
+  clear: both;
+}
+
+//layout
+@import 'layout/index';
+
+//import blocks
+@import "components/index";
+
+/*some global values*/
+body {
+    min-width:$total-min-width;
+}

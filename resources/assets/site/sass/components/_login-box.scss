@@ -1,0 +1,50 @@
+﻿body.login{
+    background:$content-background-c;
+}
+
+.login-wrapper{   
+}
+
+@include media("<=420px"){
+    .login-box{
+        top:30px;
+        min-width:380px;
+    }
+}
+@include media(">420px"){
+    .login-box{
+        top:10%;
+        width:420px;
+        &__header{
+            border-radius:5px 5px 0 0;
+        }
+        &__content{
+            border-left:1px solid $etp-grey-c;
+            border-right:1px solid $etp-grey-c;
+            border-bottom:1px solid $etp-grey-c;
+            border-radius:0 0 5px 5px;
+        }        
+    }
+}
+
+.login-box{
+
+    transition: transform 0.3s ease-in-out 0s, top 0.3s ease-in-out 0s;
+
+    position:absolute;
+    margin:0 auto;
+    left:0;
+    right:0;
+    
+    &__header{
+        background:$etp-dark-grey-c;
+        padding:15px 0 5px 0;
+        color:$etp-yellow-c;
+    }
+    
+    &__content{
+        background:$etp-white-c;
+        padding:30px;
+    }
+
+}

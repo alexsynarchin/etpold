@@ -1,0 +1,207 @@
+﻿header.main-header{
+    min-width:$total-min-width;
+    position:relative;
+    z-index:$header-z;
+    width:100%;
+    background:$header-background-c;
+    .header-logo{
+        float:left;
+        &__img-lg{
+            margin-right:20px;
+        }
+        &__img-xs{
+            margin: 0 20px 5px 0;
+        }
+        &__site-title{
+            color:$etp-yellow-c;
+            font-family: 'Exo 2', sans-serif;
+            font-weight:200;
+            font-size:20px;
+            margin:5px 0;
+        }
+    }
+
+    .header-account{
+        padding-top:5px;
+        font-weight:500;
+        float:right;
+      
+        &__menu {
+            >a{
+                font-size:1.2em;
+                
+                color:$etp-white;
+                span{
+                    margin-right:10px;
+                }
+            }
+            >a:focus, >a:hover{
+                text-decoration:none;
+            }
+            .dropdown-menu{
+                    right:0;
+                    left:auto;
+            }
+            margin:0 0 0 15px;
+            display:inline-block;
+            i {
+                margin:0 10px;
+            }
+            >div {
+                float:right;
+            }
+        }
+    }
+}
+
+/*Adaptive behaviour*/
+
+@include media(">tablet"){
+    header.main-header{
+        height:$header-h-desktop;
+        .header-logo{
+            width:340px;
+            transition: transform 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+            padding: 5px 0 0 12px;
+            &__img-lg{
+                display:visible;
+            }
+            &__img-xs{
+                display:none;
+            }
+            &__site-title{
+                display:none;
+            }
+        }
+        .header-account {
+            margin:8px 10px 0 0;
+
+        }
+    }
+}
+
+@include media("<=tablet"){
+    header.main-header{
+        height:$header-h-tablet;
+        .header-logo{
+            transition: transform 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+            padding: 0 0 0 10px;
+            background:$header-background-xs-color;
+            width:100%;
+            &__img-lg{
+                display:none;
+            }
+            &__img-xs{
+                display:visible;
+            }
+            &__site-title{
+                display:inline-block;
+            }
+        }
+        .header-account {
+            margin:2px 10px 0 0;
+         }
+    }
+}
+
+@include media(">tablet"){
+    header.header-gp{
+        .header-logo{
+            width:340px;
+            transition: transform 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+            padding: 10px 0 0 10px;
+            &__img-lg{
+                display:visible;
+            }
+            &__img-xs{
+                display:none;
+            }        
+        }
+        .header-contacts{
+            position:relative;
+            transition: transform 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+            padding-top:5px;
+        }
+    }
+}
+
+@include media("<=tablet"){
+    header.header-gp{
+        .header-logo{
+            transition: transform 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+            padding: 0 0 0 10px;
+            background:$header-background-xs-color;
+            width:100%;
+            &__img-lg{
+                display:none;
+            }
+            &__img-xs{
+                display:visible;
+            }
+            &__site-title{
+                display:inline-block;
+            }
+        }
+        .header-contacts{
+            transition: transform 0.3s ease-in-out 0s, width 0.3s ease-in-out 0s;
+            padding-top:8px;
+            div.phone-gp-text{
+                display:none;
+            }
+        }
+    }
+}
+
+header.header-gp{
+    min-width:$total-min-width;
+    position:relative;
+    z-index:$header-z;
+    overflow:hidden;
+    width:100%;
+    height:$header-h;
+    background-color:$header-background-c;
+    background-image:url("/img/patterns/chip-pattern-1.png");
+    .header-logo{
+        a:hover{
+            text-decoration:none;
+        }
+        &__img-lg{
+            margin-right:20px;
+        }
+        &__img-xs{
+            margin: 0 20px 5px 0;
+        }
+        &__site-title{
+            color:$etp-yellow-c;
+            font-family: 'Exo 2', sans-serif;
+            font-weight:200;
+            font-size:20px;
+            margin:5px 0;
+        }
+    }
+    .header-contacts{
+        span.fa.fa-phone{
+            display:inline-flex;
+            display: -webkit-inline-flex; /* Safari */
+            width:36px;
+            height:36px;
+            border:solid 1px $etp-yellow-c;
+            border-radius:100%;
+            font-size:22px;
+            color:$etp-yellow-c;
+            justify-content: center;
+            align-items: center;
+            -webkit-align-items: center; /* Safari 7.0+ */
+        }
+        span.phone-gp{
+            vertical-align:+2px;
+            font-size:20px;
+            color:$etp-yellow-c;
+            margin-left:10px;
+        }
+        div.phone-gp-text{
+            color:$etp-yellow-c;
+        }
+    }
+}
+

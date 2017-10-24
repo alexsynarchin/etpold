@@ -1,0 +1,39 @@
+﻿//pagination
+.etp-search-pagination {
+    
+    text-align: center;
+    &__pagination{
+        >ul>li>a{color:$etp-dark-grey-c !important;}
+        display:inline-block;
+        .pagination{
+            margin:0;
+        }
+    }
+    
+    &__set-quantity{
+        float:right;
+    }
+    &__count{
+        @extend %normal-bold;
+        float:left;
+    }
+
+    &__title {
+        @extend %normal-bold;
+        margin-right:5px;
+    }
+
+    &__btn {
+        padding:0 5px 5px 5px;
+        border-radius:3px;
+        height:22px;
+        @extend %button-light;
+    }
+    &__btn:hover {
+        @extend .etp-search-switch-view__btn_active;
+    }
+
+    &__btn_active {
+        @extend %button-dark;
+    }
+}

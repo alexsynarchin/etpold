@@ -1,0 +1,150 @@
+﻿//top 3 links
+$itl-angle-scale:30px;
+.inf-top-link{   
+    margin-bottom:30px;
+    &__header{
+        overflow:hidden;
+        padding:0 5px;
+        height:80px;
+        position:relative;
+        z-index:1;
+            p{
+                text-indent: 35px;
+                font-size:2em;
+                font-weight:300;
+                color:white;
+            }
+    }
+    
+    //cut angle
+    &__header:before{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0;
+        left:-10px;
+        background-color:$link-color;
+        height:100%;
+        width:130%;
+        transform:skewX(-45deg);
+        z-index:-1;
+    }
+
+    //header color states
+    &_blue &__header:before{
+        background-color:$link-color;
+    }
+    &_blue:before{
+        content:'';
+        display:block;
+        position:absolute;
+        z-index:3;
+        top:0;
+        right:15px;
+        height:86px;
+        width:86px;
+        background-image: url("/img/icons/icons-gp-set1_03.png");
+    }
+    
+    &_green &__header:before{
+        background-color:$brand-success;
+    }
+    &_green:before{
+        content:'';
+        display:block;
+        position:absolute;
+        z-index:3;
+        top:0;
+        right:15px;
+        height:86px;
+        width:86px;
+        background-image: url("/img/icons/icons-gp-set1_02.png");
+    }
+    
+    &_red &__header:before{
+        background-color:$brand-danger;
+    }
+    &_red:before{
+        content:'';
+        display:block;
+        position:absolute;
+        z-index:3;
+        top:0;
+        right:15px;
+        height:86px;
+        width:86px;
+        background-image: url("/img/icons/icons-gp-set1_01.png");
+    }
+    
+    //bent angle
+    &__header:after{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 30px 30px;
+        border-color: transparent transparent $etp-dark-grey-c;
+        z-index:-1;
+    }
+    &__content{
+        border-collapse: collapse;
+        background-color:white;
+        border-style:solid;
+        border-width: 5px;
+        
+        padding:10px;
+        box-sizing: content-box;
+    }
+    
+    
+    //content border color states
+    &_blue &__content{
+        border-color:$link-color;
+    }
+    &_green &__content{
+        border-color:$brand-success;
+    }
+    &_red &__content{
+        border-color:$brand-danger;
+    }
+    
+    
+    &__wrapper:hover{
+            box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+            border-radius:50px 0 0 0 ;
+    }
+    
+    
+}
+.inf-top-link:hover{
+    text-decoration:none;
+}
+
+//top text upon slider
+.inf-top-text{
+    color:$etp-dark-grey-c;
+    &__header{
+        text-align:center;
+    }
+    &__text{
+        text-align:justify;
+        font-size:1.2em;
+        margin-bottom:30px;
+    }
+
+
+}
+
+
+.gp-page-content{
+    position:relative;
+}
+.gp-accent-line{
+    position:relative;
+    background-color:$etp-medium-grey-c;
+    background-image:url(/img/patterns/chip-pattern-2.png);
+}

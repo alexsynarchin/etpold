@@ -1,0 +1,16 @@
+.etp-search-field{
+
+    color:$etp-dark-grey-c;
+    &__input{
+    
+    }
+    &__button{
+        //background-color:$etp-green-c;
+        //color:$etp-white-c;
+        @extend %button;
+    }
+    &__button:hover{
+        //background-color:$etp-green-c;
+        //color:$etp-white-c;
+    }
+}

@@ -1,0 +1,8 @@
+﻿html , body {
+  height: 100%;
+}
+.wrapper , .wrapper-gp{
+   position: relative;
+   min-height: 100%;
+   background:$content-background-c;
+}

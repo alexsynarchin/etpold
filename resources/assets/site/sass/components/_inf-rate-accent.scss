@@ -1,0 +1,29 @@
+﻿.inf-rate-accent{
+        margin-bottom:15px;
+    &__block{
+        color:white;
+        background-color:$brand-success;
+        min-height:100px;
+        overflow:hidden;
+        position:relative;
+        padding:5px;
+        display:block;
+        //border:1px solid $etp-grey-c;
+        border-radius:5px;
+    }
+    &__header{
+        margin-top:0;
+    }
+    &__header:before{
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        content:'\f058';
+        margin-right:5px;
+    }
+    &__block:hover{
+    }
+    
+}

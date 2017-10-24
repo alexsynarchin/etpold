@@ -1,0 +1,64 @@
+﻿.inf-rate-link{
+    margin-bottom:15px;
+    &__content{
+        overflow:hidden;
+        position:relative;
+        min-height:80px;
+        padding:3px 3px 3px 30px;
+        display:block;
+        color:white;
+    }
+    &__header{
+        margin-top:0;
+    }
+    &__content:hover{
+    text-decoration:none;
+    color:white;
+        &:before{
+        left:0;
+        }
+    }
+    &__content_active{
+        &:before{
+        left:0 !important;
+        }
+    }
+    
+    &__content:before{
+        content:'';
+        display:block;
+        position:absolute;
+        top:50%;
+        transform: translateY(-50%);
+        left:-30px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 40px 0 40px 26px;
+        border-color: transparent transparent transparent $etp-dark-grey-c;
+        transition: left 0.3s ease-in-out 0s;
+    }
+}
+
+
+.inf-rate-link_cs1{
+    .inf-rate-link__content{
+        background-color:$link-color;
+    }
+    
+
+}
+
+.inf-rate-link_cs2{
+    .inf-rate-link__content{
+        background-color:$brand-success;
+    }    
+
+}
+
+.inf-rate-link_cs3{
+    .inf-rate-link__content{
+        background-color:$brand-danger;
+    }    
+
+}
