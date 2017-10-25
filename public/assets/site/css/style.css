@@ -8933,6 +8933,34 @@ body {
   -webkit-animation: fade .6s;
   animation: fade .6s;
 }
+.close {
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 131, 119, 0.9);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  outline: none;
+}
+.close:before {
+  color: rgba(255, 255, 255, 0.9);
+  content: "X";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* кнопка закрытия при наведении */
+.close:hover {
+  background-color: rgba(252, 20, 0, 0.8);
+}
 .site-page-header {
   background: #3c4452;
   height: 92px;
